@@ -23,8 +23,9 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6">
-            <a href="https://github.com/mahamkhan-data" target="_blank" rel="noopener noreferrer" className="text-light-gray/40 hover:text-white transition-colors"><Github size={20} /></a>
-            <a href="#" className="text-light-gray/40 hover:text-white transition-colors"><Twitter size={20} /></a>
+            <a href="https://github.com/mahamkhan-data" target="_blank" rel="noopener noreferrer" className="text-light-gray/40 hover:text-azure-blue transition-colors"><Github size={20} /></a>
+            <a href="https://linkedin.com/in/maham-khan-data" target="_blank" rel="noopener noreferrer" className="text-light-gray/40 hover:text-azure-blue transition-colors"><Linkedin size={20} /></a>
+            <a href="#" className="text-light-gray/40 hover:text-azure-blue transition-colors"><Twitter size={20} /></a>
           </div>
         </div>
         

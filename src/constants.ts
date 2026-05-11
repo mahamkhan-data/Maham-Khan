@@ -6,43 +6,59 @@
 export const PROJECTS = [
   {
     id: "lakehouse-modernization",
-    name: "Enterprise Lakehouse Modernization",
-    description: "Consolidated 4 legacy data systems into a unified Databricks-Snowflake lakehouse. Architected automated ingestion for SAP and Salesforce data, achieving a 32% cost reduction and $1.2M in annual infrastructure savings.",
-    highlights: ["500+ TB/month data processing", "3x query performance improvement", "Unity Catalog governance"],
-    tech: ["Azure", "Databricks", "Snowflake", "Unity Catalog", "Delta Live Tables"],
-    image: "https://picsum.photos/seed/lakehouse/1200/800",
+    name: "Enterprise Lakehouse Framework",
+    description: "Consolidated 4 legacy on-premise silos into a production Medallion architecture (Bronze/Silver/Gold) on Databricks. Engineered metadata-driven ingestion for SAP and Salesforce using Delta Live Tables, processing 500+ TB/month with full lineage tracking and PII masking via Unity Catalog.",
+    highlights: ["Medallion Architecture", "Unity Catalog Governance", "Delta Live Tables"],
+    metrics: [
+      { label: "Cost Saving", value: "$1.2M", context: "Annual infra overhead reduction" },
+      { label: "Performance", value: "3x Faster", context: "Query speedup via partition pruning" }
+    ],
+    tech: ["Azure", "Databricks", "Snowflake", "Terraform", "Unity Catalog"],
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=1200",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mahamkhan-data/lakehouse-framework",
   },
   {
     id: "streaming-platform",
-    name: "Real-Time Streaming & Data Quality",
-    description: "Built a high-throughput streaming platform processing 5M+ events per day with sub-30 second latency. Integrated 200+ automated validation rules to reduce data incidents by 55%.",
-    highlights: ["5M+ events/day", "<30s latency", "200+ validation rules"],
-    tech: ["Kafka", "Spark Structured Streaming", "AWS", "GCP", "Python"],
-    image: "https://picsum.photos/seed/streaming/1200/800",
+    name: "Real-Time Observability Pipeline",
+    description: "Built a high-throughput streaming platform serving 5M+ health telemetry events/day. Architected Spark Structured Streaming and Kafka integrations with sub-30s E2E latency. Integrated 200+ automated Great Expectations validation rules for preventative quality monitoring.",
+    highlights: ["Kafka & Spark Streaming", "Schema Registry Enforcement", "Great Expectations JS"],
+    metrics: [
+      { label: "Latency", value: "<30s", context: "End-to-end data availability" },
+      { label: "Reliability", value: "99.9%+", context: "SLA for clinical reporting" }
+    ],
+    tech: ["Kafka", "Spark", "AWS", "Python", "Great Expectations"],
+    image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mahamkhan-data/streaming-observability",
   },
   {
     id: "genai-infrastructure",
-    name: "GenAI & LLM Data Platform",
-    description: "Architected the data backbone for production RAG pipelines and embedding generation. Orchestrated vector storage and feature stores for 5+ production AI models, reducing retrieval latency by 45%.",
-    highlights: ["5+ Production AI Models", "Vector Search Optimization", "RAG Pipeline Orchestration"],
-    tech: ["Pinecone", "Weaviate", "MLflow", "Databricks", "Feature Store"],
-    image: "https://picsum.photos/seed/genai/1200/800",
+    name: "GenAI RAG Infrastructure",
+    description: "Architected the data foundation for production RAG pipelines supporting 5+ LLM models. Engineered multi-tenant vector indexing using Pinecone and Weaviate, orchestrating automated embedding regeneration cycles while reducing inference retrieval latency for internal teams.",
+    highlights: ["Multi-tenant Vector Indexing", "Embedding Pipeline Optimization", "MLflow Tracking"],
+    metrics: [
+      { label: "Retrieval", value: "-45%", context: "Reduction in vector search latency" },
+      { label: "Scaling", value: "5+ Models", context: "Productionized GenAI workloads" }
+    ],
+    tech: ["Pinecone", "Weaviate", "MLflow", "Databricks", "LlamaIndex"],
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mahamkhan-data/genai-data-infra",
   },
   {
     id: "hipaa-platform",
-    name: "HIPAA-Compliant Clinical Data Platform",
-    description: "Designed a secure foundation for clinical analytics processing 200+ TB/year. Implemented robust PHI masking and real-time healthcare telemetry while maintaining 99.9% SLA adherence.",
-    highlights: ["HIPAA/GDPR Compliant", "99.9% SLA Adherence", "PHI Masking & Security"],
-    tech: ["Snowflake", "Airflow", "Kafka", "dbt", "Azure"],
-    image: "https://picsum.photos/seed/healthcare/1200/800",
+    name: "HIPAA Data Warehouse (dbt)",
+    description: "Designed a secure analytics foundation processing 200+ TB/year of PII/PHI data. Implemented dbt-based modular modeling to unify claims and EHR sources. Enforced column-level encryption and dynamic masking to maintain absolute compliance while enabling self-service analytics.",
+    highlights: ["PHI Masking & Security", "dbt Modeling (Modular)", "Modular CI/CD Testing"],
+    metrics: [
+      { label: "Compliance", value: "HI-TRUST", context: "Audited security standards" },
+      { label: "Insight Speed", value: "75%", context: "Faster self-service report generation" }
+    ],
+    tech: ["Snowflake", "dbt", "Airflow", "Azure", "GitHub Actions"],
+    image: "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&q=80&w=1200",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mahamkhan-data/hipaa-warehouse-modeling",
   }
 ];
 
@@ -51,40 +67,40 @@ export const EXPERIENCE = [
     company: "NVIDIA",
     role: "Senior Data Engineer",
     period: "Jan 2024 - Present",
-    description: "Leading the architecture of production-grade GenAI data platforms and high-scale cloud-native lakehouse systems.",
+    description: "Leading the architecture of high-throughput data platforms, focusing on the intersection of GenAI infrastructure and enterprise lakehouse governance.",
     achievements: [
-      "Architected production GenAI platform supporting 5+ AI models across 10+ business units, reducing inference retrieval latency by 45%.",
-      "Governed Databricks and Snowflake lakehouses using medallion architecture and Unity Catalog, processing 500+ TB/month of multi-structured data.",
-      "Standardized dimensional modeling frameworks (Star/Snowflake, Data Vault 2.0) improving average query performance by 2-3x.",
-      "Designed ingestion pipelines for SAP S/4HANA and Salesforce processing 50M+ records per day with full audit trails."
+      "Architected the data foundation for RAG-based LLM applications, implementing multi-tenant vector indexing that reduced retrieval latency by 45% for 10+ internal business units.",
+      "Engineered a unified governance layer using Unity Catalog for a 500+ TB/month data estate, balancing strict PII/PHI compliance with developer self-service autonomy.",
+      "Refactored legacy dimensional models into a scalable semantic layer, reducing engineering toil by 60% and improving reliability through automated data quality gates.",
+      "Developed high-concurrency ingestion frameworks for SAP and Salesforce, processing 50M+ daily events with guaranteed exactly-once delivery and full lineage."
     ],
-    tech: ["Databricks", "Snowflake", "Unity Catalog", "Pinecone", "Weaviate", "Spark"]
+    tech: ["Databricks", "Snowflake", "Spark", "Pinecone", "Unity Catalog", "Azure"]
   },
   {
     company: "Deaconess Health System",
     role: "Senior Data Engineer",
     period: "Jan 2019 - Dec 2023",
-    description: "Engineered robust, HIPAA-compliant healthcare data platforms and real-time clinical streaming architectures.",
+    description: "Built and scaled HIPAA-compliant analytics infrastructure, focusing on real-time clinical data streams and predictive modeling foundations.",
     achievements: [
-      "Built Kafka and Spark Structured Streaming pipelines processing 5M+ healthcare events per day, reducing data latency from 6 hours to under 10 minutes.",
-      "Implemented data quality and monitoring frameworks across 30+ production pipelines, reducing failures by 40%.",
-      "Developed AI/ML feature engineering pipelines reducing feature preparation time by 50%.",
-      "Built CI/CD pipelines using GitHub Actions and Azure DevOps, cutting deployment time from 4 hours to under 45 minutes."
+      "Modernized clinical data processing by implementing Kafka-based streaming, reducing the window for critical care reporting from 6 hours to under 10 minutes.",
+      "Developed a custom AI/ML feature store that slashed feature preparation time by 50% for clinical decision support models serving 500+ clinicians.",
+      "Established enterprise-wide data observability patterns, reducing production incidents by 40% through proactive profiling and schema-registry enforcement.",
+      "Mentored a team of 4 junior engineers, establishing dbt and Airflow best practices that reduced onboarding time from months to weeks."
     ],
-    tech: ["Azure", "AWS", "BigQuery", "Kafka", "dbt", "Airflow"]
+    tech: ["Kafka", "Spark", "Azure", "dbt", "Airflow", "BigQuery"]
   },
   {
     company: "RevSpring",
     role: "Data Engineer",
     period: "Jan 2016 - Dec 2018",
-    description: "Specialized in ETL/ELT pipeline automation and high-performance data modeling for analytics reporting.",
+    description: "Standardized ETL/ELT lifecycles and optimized cloud warehouse costs for large-scale financial and patient engagement data.",
     achievements: [
-      "Built Python-based ETL frameworks reducing full-load runtimes by 65% and cutting processing costs by 28%.",
-      "Developed dbt-based dimensional models across 5 reporting domains, improving query performance 3x.",
-      "Implemented Kafka event streams for real-time operational analytics with sub-30 second end-to-end latency.",
-      "Delivered optimized datasets for Tableau and Power BI, improving dashboard load times by 55%."
+      "Re-engineered Python-based ETL frameworks to support incremental loading, reducing runtime by 65% and realizing ~$90K in annual compute savings.",
+      "Built resilient data models using dbt for 5 critical reporting domains, improving query performance significantly by optimizing join strategies and partition pruning.",
+      "Architected Kafka event streams for real-time operational metrics, achieving sub-30 second latency for high-priority business dashboards.",
+      "Designed and deployed optimized datasets for Power BI, reducing dashboard load times by 55% for 200+ executive users."
     ],
-    tech: ["Python", "PySpark", "Redshift", "Kafka", "dbt", "Tableau"]
+    tech: ["Python", "PySpark", "Redshift", "dbt", "Kafka", "Snowflake"]
   },
   {
     company: "Devsinc",

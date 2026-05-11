@@ -4,7 +4,7 @@
  */
 
 import { motion } from "motion/react";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Linkedin } from "lucide-react";
 import { STATS } from "../constants";
 
 export default function Hero() {
@@ -56,9 +56,9 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            Senior Data Engineer 
+            AI Data Platform Engineer at <span className="text-white border-b-2 border-azure-blue">NVIDIA</span>
             <span className="hidden md:block w-2 h-2 rounded-full bg-azure-blue" />
-            GenAI & ML Infrastructure Specialist
+            Cloud-Native Infrastructure Specialist
           </motion.p>
           
           <motion.p 
@@ -86,6 +86,16 @@ export default function Hero() {
               className="px-8 py-5 bg-transparent border border-white/20 text-white rounded-full font-bold transition-all hover:border-white hover:bg-white/5"
             >
               Contact Me
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/maham-khan-data"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-5 bg-white/5 border border-white/10 text-white rounded-full font-bold transition-all hover:bg-white/10 flex items-center gap-2"
+            >
+              <Linkedin size={18} className="text-azure-blue" /> LinkedIn
             </motion.a>
           </div>
         </motion.div>

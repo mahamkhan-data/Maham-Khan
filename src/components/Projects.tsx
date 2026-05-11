@@ -53,14 +53,19 @@ export default function Projects() {
                   ))}
                 </div>
                 
-                <div className="grid grid-cols-2 gap-4 py-4">
-                  {project.highlights?.map((h, i) => (
-                    <div key={i} className="flex items-center gap-2 p-3 bg-white/5 rounded-xl border border-white/10">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-ai" />
-                      <span className="text-xs font-semibold text-light-gray">{h}</span>
-                    </div>
-                  ))}
-                </div>
+                {project.metrics && (
+                  <div className="grid grid-cols-2 gap-4 py-4">
+                    {project.metrics.map((m, i) => (
+                      <div key={i} className="space-y-1">
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-2xl font-display font-bold text-white">{m.value}</span>
+                          <span className="text-[10px] uppercase font-bold text-light-gray/40 tracking-widest">{m.label}</span>
+                        </div>
+                        <p className="text-[10px] text-light-gray/60 leading-tight">{m.context}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 <div className="flex gap-4 pt-4">
                   <motion.a

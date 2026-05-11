@@ -4,7 +4,7 @@
  */
 
 import { motion } from "motion/react";
-import { Download, MapPin, Briefcase } from "lucide-react";
+import { Download, MapPin, Briefcase, Github, Linkedin } from "lucide-react";
 
 export default function About() {
   return (
@@ -49,15 +49,38 @@ export default function About() {
                 </div>
               </div>
 
-              <motion.a
-                href="resume.pdf"
-                download="Maham_Khan_Resume.pdf"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-8 px-10 py-4 bg-pure-black text-white rounded-full font-bold flex items-center gap-3 shadow-xl transition-all hover:bg-charcoal"
-              >
-                Download Executive CV <Download size={18} />
-              </motion.a>
+              <div className="flex flex-wrap items-center gap-4 mt-8">
+                <motion.a
+                  href="resume.pdf"
+                  download="Maham_Khan_Resume.pdf"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-10 py-4 bg-pure-black text-white rounded-full font-bold flex items-center gap-3 shadow-xl transition-all hover:bg-charcoal"
+                >
+                  Download CV <Download size={18} />
+                </motion.a>
+
+                <div className="flex gap-4">
+                  <motion.a
+                    href="https://linkedin.com/in/maham-khan-data"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    className="p-4 bg-white border border-black/10 rounded-full text-charcoal hover:bg-azure-blue hover:text-white transition-all shadow-sm"
+                  >
+                    <Linkedin size={20} />
+                  </motion.a>
+                  <motion.a
+                    href="https://github.com/mahamkhan-data"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    className="p-4 bg-white border border-black/10 rounded-full text-charcoal hover:bg-pure-black hover:text-white transition-all shadow-sm"
+                  >
+                    <Github size={20} />
+                  </motion.a>
+                </div>
+              </div>
             </div>
           </motion.div>
 
