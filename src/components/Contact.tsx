@@ -37,7 +37,9 @@ export default function Contact() {
       } else {
         const text = await response.text();
         console.error("Non-JSON response received:", text);
-        throw new Error(`Server returned non-JSON response (Status ${response.status})`);
+        // Clean HTML tags and provide a snippet
+        const preview = text.slice(0, 100).replace(/<[^>]*>?/gm, '').trim();
+        throw new Error(`Server Error (${response.status}): ${preview || 'Unexpected response format'}`);
       }
 
       if (response.ok) {
